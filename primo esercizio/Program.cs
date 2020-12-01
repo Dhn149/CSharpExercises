@@ -1,4 +1,5 @@
 ﻿using System;
+using ECommerce;
 
 namespace primo_esercizio
 {
@@ -12,9 +13,27 @@ namespace primo_esercizio
             Console.WriteLine($"Your name is {name.ToUpper()}");
             */
 
+            /*
             string catchArgs = args[0];
             var args1 = catchArgs.ToUpper();
             System.Console.WriteLine($"This is my argument to upper {args1}");
+            */
+           Customer Coso= new Customer(1,"Pippo","Franco");
+            Coso.login();
+
+            DateTime now = DateTime.Now;
+
+            HorderHeader Stock= new HorderHeader(4,now, 13);
+            Stock.Create();
+
+            HorderHeader deleteOrder= new HorderHeader(4,now, 13);
+            Stock.Cancel();
+
+
+            HorderHeader ordersList= new HorderHeader(4,now, 13);
+            Stock.List();
+
         }
+    
     }
 }
