@@ -64,7 +64,56 @@ namespace  ECommerce
         
         }
         
+    class Article{
+
+        private int Id;
+        private string Description;
+        private double Price;
+        private int Stock;
+        public int IvaRate;
+
+        public Article(int Id, string Description, double Price) {
 
 
-   }  
+
+            Id =  5;
+            Description = "facemask";      
+            Price =  12.44;
+
+            }
+
+
+    public void CRUD() {
+
+        Console.WriteLine($"These are your articles{this.Id} {this.Description} {this.Price}");
+
+    }
+    public void List(){
+    
+    Console.WriteLine($" This is your's list {this.Id} {this.Description}{this.Price}");
+    
+    }
+    public void Retrieve(){
+    
+    Console.WriteLine($" Do tou want to retrieve this{this.Id} {this.Description}{this.Price}");
+
+    }
+    public void Destroy(){
+    
+    Console.WriteLine($" Do you want to destroy this {this.Id} {this.Description}{this.Price}");
+    }
+
+
+    }
+}
+
+
+
+    
+        
+
+
+
+    
+   
     

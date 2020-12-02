@@ -1,6 +1,7 @@
 ﻿using System;
 using ECommerce;
 
+
 namespace primo_esercizio
 {
     class Program
@@ -33,6 +34,26 @@ namespace primo_esercizio
             HorderHeader ordersList= new HorderHeader(4,now, 13);
             Stock.List();
 
+            Article article = new Article(5,"Face mask", 12.44);
+            article.CRUD();
+
+            Article newMyArticle = new Article(5,"Face mask", 12.44);
+            newMyArticle.List();
+
+            Article newArticle = new Article(5,"Face mask", 12.44);
+            newArticle.Retrieve();
+                    
+                    Article myArticle = new Article(5,"Face mask", 12.44);
+                
+                    myArticle.Destroy();
+
+
+
+
+
+
+
+       
         }
     
     }
