@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using ECommerce;
 
 
@@ -46,6 +47,17 @@ namespace primo_esercizio
                     Article myArticle = new Article(5,"Face mask", 12.44);
                 
                     myArticle.Destroy();
+
+
+
+        var names = new List<string> { "Glauco", "Annarella", "Gino","Nedo", "Enrico","Asdrubale" };
+            Customers myCustumers = new Customers();
+           
+            foreach (var name in names)
+{
+            myCustumers.Extraction(name);
+
+}
 
 
 

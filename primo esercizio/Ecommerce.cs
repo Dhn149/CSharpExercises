@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 
 namespace  ECommerce
@@ -15,6 +16,9 @@ namespace  ECommerce
         protected string City;
         protected string Email;
         protected string Password;
+      
+
+
 
         public Customer(int id, string name, string surname) {
 
@@ -22,13 +26,14 @@ namespace  ECommerce
         Name = name;
         Surname = surname;
         
+        
 
         }
 
         public void login() {
             Console.WriteLine($"Welcome to my site, this is {this.Id} {this.Name} {this.Surname}");
         }
-
+        
         
     }  
 
@@ -103,6 +108,21 @@ namespace  ECommerce
     Console.WriteLine($" Do you want to destroy this {this.Id} {this.Description}{this.Price}");
     }
 
+
+    }
+    class Customers {
+
+
+        private string Names;
+        private int Id;
+
+        private int IdUtente;
+
+    public void Extraction(string names){
+
+        Console.WriteLine($"the names are {names}");
+
+    }
 
     }
 }
