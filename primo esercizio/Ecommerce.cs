@@ -119,7 +119,7 @@ namespace  ECommerce
         private int IdUtente;
 
     public void Extraction(string names){
-
+// estrarre  nomi da metodo
         Console.WriteLine($"the names are {names}");
 
     }
