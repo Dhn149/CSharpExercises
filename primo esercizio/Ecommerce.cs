@@ -125,11 +125,102 @@ namespace  ECommerce
     }
 
     }
-}
+    class OrderDetail {
+        private int Id;
+        public int IdOrder;
+        public int IdArticle;
+        private double Price;
+        private int Stock;
 
 
+        public OrderDetail (int id, int idArticle, double price) {
 
+                Id = id;
+                IdArticle = idArticle;
+                Price = price;
+
+        }
+
+        public void List() {
+            Console.WriteLine($"This is the list of the Order detail {this.Id}, {this.IdArticle}, {this.Price}");
+        }
+    }
+
+
+    class Articles {
+
+
+    }
     
+
+    class Cart{
+        private int Id;
+        private int IdArticle;
+        private int IdCustomer;
+
+        private int Stock;
+
+        public Cart (int id, int idArticle, int idCustomer) {
+        
+        Id = id;
+        IdArticle = idArticle;
+        IdCustomer = idCustomer;
+        
+        }
+            
+            public void ToBuy(){
+
+                Console.WriteLine($"{this.Id} Do you want to buy this {this.IdArticle}? Please Confirm {this.IdCustomer}");
+            }
+        
+            public void ToEmpty(){
+
+                Console.WriteLine($"{this.Id} Do you wanto to empty the cart and canceled {this.IdArticle}? Please Confirm {this.IdCustomer}");
+            }
+
+        public void List(){
+    
+    Console.WriteLine($" This is your's list {this.Id} {this.IdArticle}{this.IdCustomer}");
+    }
+    }
+    class Admin {
+        private string Administrator;
+
+        public Admin(string administrator) {
+            Administrator = administrator;
+        }
+
+        public void AdminLogin() {
+            Console.WriteLine($"Welcome to the site, this is {this.Administrator}");
+        }
+
+            public void OrderManagement() {
+
+                Console.WriteLine($"Those orders are controlled by {this.Administrator}");
+
+            }
+
+            public void ArticlesManagement() {
+
+                Console.WriteLine($"These articles are managed by {this.Administrator}");
+            }
+
+            public void CustomersManagement() {
+
+                 Console.WriteLine($"These Customers are managed by {this.Administrator}");
+            }
+
+        
+        }
+    }
+    
+
+     
+
+
+
+
+
         
 
 

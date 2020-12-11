@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ECommerce;
 
 
+
 namespace primo_esercizio
 {
     class Program
@@ -59,8 +60,32 @@ namespace primo_esercizio
 
 }
 
+            Cart cart = new Cart(3, 82, 765);
+
+            cart.ToBuy();
+
+            Cart myCart = new Cart(3,82,765);
+            myCart.ToEmpty();
+
+            Cart myNewCart = new Cart(3,82,765);
+            myNewCart.List();
 
 
+        Admin admin = new Admin("Giovan Battista");
+        admin.AdminLogin();
+
+
+        Admin newAdmin = new Admin("Giovan Battista");
+        newAdmin.OrderManagement();
+
+        Admin newAdm = new Admin("Giovan Battista");
+        newAdm.ArticlesManagement();
+
+
+
+          Admin newAdmi = new Admin("Giovan Battista");
+        newAdmi.CustomersManagement();
+        
 
 
 
