@@ -6,10 +6,10 @@ namespace ExLinq
 {
     class TuscanCities
     {
-        public static IEnumerable<string> filtering(string TuscanCities)
+        public static void filtering(string TuscanCities)
         {
         
-            var cities = new string[]{"Arezzo, Arezzo, Siena, Firenze, Lucca"};
+            var cities = new string[]{"Arezzo", "Arezzo", "Siena", "Firenze", "Lucca"};
            
 
             IEnumerable<string> queryTuscanCities=
@@ -18,10 +18,11 @@ namespace ExLinq
               where city == TuscanCities
             select city;
 
-          foreach (string city in queryTuscanCities)
+          foreach (var town in queryTuscanCities)
           {
-              Console.Writeline($"{city}");
+              Console.WriteLine(town);
           }
+          
            
         }
 

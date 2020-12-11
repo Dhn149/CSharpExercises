@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using ECommerce;
+using ExLinq;
 
 
 
@@ -88,8 +89,9 @@ namespace primo_esercizio
         
 
 
-
-
+           
+    TuscanCities.filtering("Lucca");
+ 
        
         }
     
