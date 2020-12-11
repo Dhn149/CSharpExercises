@@ -87,10 +87,9 @@ namespace primo_esercizio
           Admin newAdmi = new Admin("Giovan Battista");
         newAdmi.CustomersManagement();
         
+// fine costruzione classi
 
-
-           
-    TuscanCities.filtering("Lucca");
+ 
  
        
         }
