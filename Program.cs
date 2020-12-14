@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using ECommerce;
 using ExLinq;
+using Mountains;
 
 
 
@@ -9,7 +10,13 @@ namespace primo_esercizio
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(string [] args)
+        { 
+            Peaks.FirstColumn(";","Monte Falco, 1658, Parco Foreste Casentinesi ; Monte Falterona, 1654, Parco Foreste Casentinesi; Monte Fumaiolo, 1407, Appennino Tosco Emiliano");
+        
+        
+         }
+          static void _Main(string[] args)
         {
             /* primo esercizio svolto 
             Console.WriteLine("Please, insert your name");
@@ -89,10 +96,9 @@ namespace primo_esercizio
         
 // fine costruzione classi
 
- 
- 
-       
-        }
+ Peaks.FirstColumn(";","Monte Falco, 1658, Parco Foreste Casentinesi ; Monte Falterona, 1654, Parco Foreste Casentinesi; Monte Fumaiolo, 1407, Appennino Tosco Emiliano");    
+        
     
     }
+}
 }
