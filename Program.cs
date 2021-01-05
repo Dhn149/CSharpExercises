@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using ECommerce;
 using ExLinq;
 using Mountains;
+using System.Linq;
 
 
 
@@ -10,13 +11,15 @@ namespace primo_esercizio
 {
     class Program
     {
+        /*
         static void Main(string [] args)
         { 
             Peaks.FirstColumn(";","Monte Falco, 1658, Parco Foreste Casentinesi ; Monte Falterona, 1654, Parco Foreste Casentinesi; Monte Fumaiolo, 1407, Appennino Tosco Emiliano");
         
         
          }
-          static void _Main(string[] args)
+         */
+          static void Main(string[] args)
         {
             /* primo esercizio svolto 
             Console.WriteLine("Please, insert your name");
@@ -32,6 +35,12 @@ namespace primo_esercizio
            Customer Coso= new Customer(1,"Pippo","Franco");
             Coso.login();
 
+            Customer Gino = new Customer(7,"Gino","Estrada");      //Create customer
+            Gino.Add();
+            Customer Nedo = new Customer(8,"Nedo","Fioravante");
+            Nedo.Add();
+
+
             DateTime now = DateTime.Now;
 
             HorderHeader Stock= new HorderHeader(4,now, 13);
@@ -44,22 +53,14 @@ namespace primo_esercizio
             HorderHeader ordersList= new HorderHeader(4,now, 13);
             Stock.List();
 
-            Article article = new Article(5,"Face mask", 12.44);
-            article.CRUD();
-
-            Article newMyArticle = new Article(5,"Face mask", 12.44);
-            newMyArticle.List();
-
-            Article newArticle = new Article(5,"Face mask", 12.44);
-            newArticle.Retrieve();
-                    
-                    Article myArticle = new Article(5,"Face mask", 12.44);
+            Article Redshoes = new Article("Red shoes", 12.44,34);
+            Article gloves = new Article("black gloves",22.70, 22);
+            Article scarf = new Article("scarf purple and yellow",32.99,56); // Create Article
+            Article bluejeans = new Article("blue-jeans", 12.44, 340);
+            Article faceMask = new Article("Face mask", 12.44,47);
+           
                 
-                    myArticle.Destroy();
-
-
-
-        var names = new List<string> { "Glauco", "Annarella", "Gino","Nedo", "Enrico","Asdrubale" };
+            var names = new List<string> { "Glauco", "Annarella", "Gino","Nedo", "Enrico","Asdrubale" };
             Customers myCustumers = new Customers();
            
             foreach (var name in names)
@@ -68,37 +69,24 @@ namespace primo_esercizio
 
 }
 
-            Cart cart = new Cart(3, 82, 765);
+            Articles addItems = new Articles();
+            addItems.AddArticle(gloves);
+            addItems.AddArticle(Redshoes);
+            addItems.AddArticle(scarf);     //Add article to list
+            addItems.AddArticle(bluejeans);
+            addItems.AddArticle(faceMask);
 
-            cart.ToBuy();
-
-            Cart myCart = new Cart(3,82,765);
-            myCart.ToEmpty();
-
-            Cart myNewCart = new Cart(3,82,765);
-            myNewCart.List();
-
-
-        Admin admin = new Admin("Giovan Battista");
-        admin.AdminLogin();
-
-
-        Admin newAdmin = new Admin("Giovan Battista");
-        newAdmin.OrderManagement();
-
-        Admin newAdm = new Admin("Giovan Battista");
-        newAdm.ArticlesManagement();
+            addItems.List();
+           addItems.searchArticle("blue-jeans"); 
+           // i've found the method to search an article by it descprition
 
 
 
-          Admin newAdmi = new Admin("Giovan Battista");
-        newAdmi.CustomersManagement();
-        
-// fine costruzione classi
 
- Peaks.FirstColumn(";","Monte Falco, 1658, Parco Foreste Casentinesi ; Monte Falterona, 1654, Parco Foreste Casentinesi; Monte Fumaiolo, 1407, Appennino Tosco Emiliano");    
-        
-    
+
+
+            
+
     }
 }
 }

@@ -25,15 +25,17 @@ namespace  ECommerce
         Id = id;
         Name = name;
         Surname = surname;
-        
-        
-
-        }
+    }
 
         public void login() {
             Console.WriteLine($"Welcome to my site, this is {this.Id} {this.Name} {this.Surname}");
         }
         
+        public void Add(){
+        
+        Console.WriteLine($"Add the{this.Id}{Name}{Surname}");
+    }
+
         
     }  
 
@@ -71,42 +73,44 @@ namespace  ECommerce
         
     class Article{
 
-        private int Id;
-        private string Description;
-        private double Price;
-        private int Stock;
+        private int _Id;
+        public string _Description;
+        public double _Price;
+        public int _Stock;
         public int IvaRate;
 
-        public Article(int Id, string Description, double Price) {
+        public Article(string description, double price,int stock) {
 
-
-
-            Id =  5;
-            Description = "facemask";      
-            Price =  12.44;
-
-            }
-
+            this._Stock = stock;
+            this._Description = description;
+            this._Price = price;
+        }
 
     public void CRUD() {
 
-        Console.WriteLine($"These are your articles{this.Id} {this.Description} {this.Price}");
+       
 
     }
     public void List(){
     
-    Console.WriteLine($" This is your's list {this.Id} {this.Description}{this.Price}");
+   
     
     }
     public void Retrieve(){
     
-    Console.WriteLine($" Do tou want to retrieve this{this.Id} {this.Description}{this.Price}");
+   
 
     }
     public void Destroy(){
     
-    Console.WriteLine($" Do you want to destroy this {this.Id} {this.Description}{this.Price}");
     }
+    
+    public void Add(){
+
+                
+    }
+        
+
 
 
     }
@@ -123,7 +127,7 @@ namespace  ECommerce
         Console.WriteLine($"the names are {names}");
 
     }
-
+    
     }
     class OrderDetail {
         private int Id;
@@ -150,7 +154,42 @@ namespace  ECommerce
     class Articles {
 
 
+        private string Article;
+        private int Id;
+        private double Price;
+        private int Stock;
+        public int IvaRate;
+        public List<Article> myList;
+
+       public Articles() {
+
+                myList = new List<Article>();
     }
+
+            public void AddArticle(Article genericArticle){
+
+                myList.Add(genericArticle);
+}
+    public void List(){
+
+        foreach(var item in myList)
+        {
+                Console.WriteLine($"{item._Description}");
+        }
+
+    
+}
+   public void searchArticle(string searchTerm)
+   {
+       foreach(var item in myList)
+       {
+            if(searchTerm == item._Description)
+            {
+                Console.WriteLine($"{item._Price}");
+            }
+       }
+   }
+}
     
 
     class Cart{
@@ -182,6 +221,15 @@ namespace  ECommerce
     
     Console.WriteLine($" This is your's list {this.Id} {this.IdArticle}{this.IdCustomer}");
     }
+
+     public void Add(){
+
+                Console.WriteLine($"{this.Id} You {this.IdCustomer} just added this article {this.IdArticle} in the cart");
+            }
+
+
+
+
     }
     class Admin {
         private string Administrator;

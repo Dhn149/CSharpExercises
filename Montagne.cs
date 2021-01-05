@@ -21,32 +21,9 @@ namespace Mountains
               Console.WriteLine(peaks);
           }
           
+ }
 
-
-
-
-
-            }
-
-
-
-
-
-
-
-
-
-        }
-
-
-
-
-
-
-
-
-
-
+}
 
 
 }
