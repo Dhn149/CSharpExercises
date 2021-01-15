@@ -4,11 +4,14 @@ using ECommerce;
 using ExLinq;
 using Mountains;
 using System.Linq;
-
+using UserList;
+using Velocity;
 
 
 namespace primo_esercizio
 {
+    
+
     class Program
     {
         /*
@@ -32,6 +35,7 @@ namespace primo_esercizio
             var args1 = catchArgs.ToUpper();
             System.Console.WriteLine($"This is my argument to upper {args1}");
             */
+            /*
            Customer Coso= new Customer(1,"Pippo","Franco");
             Coso.login();
 
@@ -80,13 +84,21 @@ namespace primo_esercizio
            addItems.searchArticle("blue-jeans"); 
            // i've found the method to search an article by it descprition
 
+*/
 
+User Giacomo = new User(1,"Giacomo", 27);
+Giacomo.addUser(Giacomo);
+User Caterina= new User(2,"Caterina", 35);
+Caterina.addUser(Caterina);
+User Antenore = new User(3,"Antenore", 73);
+Antenore.addUser(Antenore);
+User Claudio = new User(4, "Claudio", 45);
+Claudio.addUser(Claudio);
+User Cinzia = new User(5,"Cinzia", 17);
+Cinzia.addUser(Cinzia);
 
+Cinzia.Find();
 
-
-
-            
-
-    }
+        }
 }
 }
